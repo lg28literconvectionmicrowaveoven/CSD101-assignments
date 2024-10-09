@@ -1,13 +1,11 @@
 #include <stdio.h>
 
-#define bmi(weight, height) (weight / height * height)
-
 void compute_bmi(int n, float *weight, float *height, float *bmi) {
     float w, h;
     for (int i = 0; i < n; i++) {
         w = *(weight + i);
         h = *(height + i);
-        *(bmi + i) = bmi(w, h);
+        *(bmi + i) = w / (h * h);
     }
 }
 
